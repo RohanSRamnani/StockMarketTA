@@ -1,0 +1,132 @@
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import pandas as pd
+
+class ChartVisualizer:
+    @staticmethod
+    def create_analysis_chart(df, signals):
+        """Create interactive chart with indicators and signals"""
+        fig = make_subplots(rows=4, cols=1, 
+                           shared_xaxes=True,
+                           vertical_spacing=0.05,
+                           row_heights=[0.4, 0.2, 0.2, 0.2])
+
+        # Price chart (row 1)
+        candlestick = go.Candlestick(
+            x=df.index,
+            open=df['Open'],
+            high=df['High'],
+            low=df['Low'],
+            close=df['Close'],
+            name='Price'
+        )
+        fig.add_trace(candlestick, row=1, col=1)
+
+        # Add buy/sell signals to price chart only
+        buy_signals = signals[signals['Signal'] == 1]
+        sell_signals = signals[signals['Signal'] == -1]
+
+        if not buy_signals.empty:
+            price_lows = df.loc[buy_signals.index]['Low']
+            buy_scatter = go.Scatter(
+                x=buy_signals.index, 
+                y=price_lows * 0.99,
+                mode='markers',
+                marker=dict(symbol='triangle-up', size=15, color='green'),
+                name='Buy Signal'
+            )
+            fig.add_trace(buy_scatter, row=1, col=1)
+
+        if not sell_signals.empty:
+            price_highs = df.loc[sell_signals.index]['High']
+            sell_scatter = go.Scatter(
+                x=sell_signals.index,
+                y=price_highs * 1.01,
+                mode='markers',
+                marker=dict(symbol='triangle-down', size=15, color='red'),
+                name='Sell Signal'
+            )
+            fig.add_trace(sell_scatter, row=1, col=1)
+
+        # MACD panel (row 2)
+        macd_line = go.Scatter(
+            x=df.index,
+            y=df['MACD'],
+            name='MACD',
+            line=dict(color='blue')
+        )
+        fig.add_trace(macd_line, row=2, col=1)
+        
+        signal_line = go.Scatter(
+            x=df.index,
+            y=df['MACD_Signal'],
+            name='Signal',
+            line=dict(color='orange')
+        )
+        fig.add_trace(signal_line, row=2, col=1)
+        
+        histogram = go.Bar(
+            x=df.index,
+            y=df['MACD_Histogram'],
+            name='Histogram'
+        )
+        fig.add_trace(histogram, row=2, col=1)
+
+        # RSI panel (row 3)
+        rsi_line = go.Scatter(
+            x=df.index,
+            y=df['RSI'],
+            name='RSI',
+            line=dict(color='purple')
+        )
+        fig.add_trace(rsi_line, row=3, col=1)
+        
+        fig.add_hline(y=70, line_dash="dash", line_color="red", row=3, col=1)
+        fig.add_hline(y=30, line_dash="dash", line_color="green", row=3, col=1)
+
+        # Volume panel (row 4)
+        volume_bars = go.Bar(
+            x=df.index,
+            y=df['Volume'],
+            name='Volume'
+        )
+        fig.add_trace(volume_bars, row=4, col=1)
+        
+        volume_sma = go.Scatter(
+            x=df.index,
+            y=df['Volume_SMA'],
+            name='Volume SMA',
+            line=dict(color='red')
+        )
+        fig.add_trace(volume_sma, row=4, col=1)
+
+        # No divergence panel needed
+
+        # Update y-axis titles and ranges
+        fig.update_yaxes(title_text="PRICE", row=1, col=1)
+        fig.update_yaxes(title_text="MACD", row=2, col=1)
+        fig.update_yaxes(title_text="RSI", row=3, col=1)
+        fig.update_yaxes(title_text="VOLUME", row=4, col=1)
+
+        # Update layout
+        fig.update_layout(
+            title='Technical Analysis Dashboard',
+            xaxis_title='Date',
+            height=1000,
+            showlegend=True,
+            xaxis_rangeslider=dict(
+                visible=True,               # Ensure the slider is visible
+                thickness=0.05,             # Adjust thickness
+                bgcolor='white',            # Set background color to white
+                bordercolor='black',        # Optional: Add a border color for clarity
+                borderwidth=1,              # Optional: Set border width
+            ),
+            xaxis=dict(
+                rangeslider=dict(
+                    visible=True,
+                    bgcolor='white'          # Explicitly set the rangeslider background to white
+                )
+            )
+        )
+
+        return fig

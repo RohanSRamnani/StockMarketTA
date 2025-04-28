@@ -1,0 +1,23 @@
+Box 1/Panel 1: Candle patterns 
+1. Red candle----a bullish signal, hinting that there is an uptrend in a shorter term. But for this bullish signal to play out, it has to align with a gradual increase in whale accumulation.
+2. Yellow candle---a bearish signal, implying that there is a downtrend in a shorter term.
+3. Dark blue candle--the uptrend persists
+4. Light blue candle---the downtrend persists
+5. Red ribbon---uptrend in the middle term 6. Blue ribbon---downtrend in the middle term Even a red ribbon or blue ribbon has both red candles and yellow candles.
+Box 2/Panel 2: Technical expert It is a mimic of Panel 1.
+1. Green bar means downtrend whereas red bar refers to uptrend.
+2. Purple line refers to an uptrend line whereas the green line refers to the downtrend line.
+Box 3/Panel 3: Whale accumulation/distribution patterns vs Retail accumulation 
+1. Whales (red bars) need to reach 50 ％for the stock to run and 75 ％ to surge.
+2. Whales can both accumulate and distribute. The longer the red bars, the more the whales—a bullish trend The shorter the red bars, the less the whales—less bullish, as whales might be shaking out weaker hands or distributing, depending on the price actions.
+3. Retail investors (green bars). For a stock to run, green bars need to disappear. The more the green bars, the more likely the stock is going to drop/plummet.
+4 .When seeing a decrease in the percentage of retail accumulation over the past few days, weeks or months, it can also be a reliable signal that the stock is bottoming out.
+5. Yellow bars are daily traders, which we don’t need to care.
+Box 4/Panel 4: MACD (Moving Average Convergence Divergence) 
+1. When the MACD is below zero, the price is usually in a downward trend (bearish momentum)
+2. When the MACD is above zero, the price is usually in an uptrend (bullish divergence)
+3. The golden cross (fast and slow line crossing each other) curls to the upside, a bullish signal.
+4. The golden cross curls to the downside, a bearish signal.
+Box 5/Panel 5: RSI (Relative Strength Index) 
+1. RSI around 20-30 is oversold and it may be a buy indicator whereas RSI above 80-95 is usually a sell signal.
+2. I like to use 3 sets of RSI and compare the previous lows as a signal to predict the bottom price. When 3 sets of RSI curl up, it’s usually bullish and vice versa.
