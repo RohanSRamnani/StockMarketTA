@@ -1,8 +1,8 @@
-# MarketSense: Advanced Stock Market Intelligence Platform
+# StockMarket TA: Advanced Stock Market Intelligence Platform
 
 ## Project Overview
 
-MarketSense is a sophisticated market intelligence platform designed to provide traders and investors with deep insights into stock market behavior, with a particular focus on institutional (whale) activity detection. The platform leverages multiple data sources and advanced technical analysis to help users identify high-probability trading opportunities across different timeframes.
+This is a sophisticated market intelligence platform designed to provide traders and investors with deep insights into stock market behavior, with a particular focus on institutional (whale) activity detection. The platform leverages multiple data sources and advanced technical analysis to help users identify high-probability trading opportunities across different timeframes.
 
 ## Key Features
 
@@ -37,8 +37,6 @@ MarketSense is a sophisticated market intelligence platform designed to provide 
 - **Signal Annotation**: Visual markers for buy/sell signals and whale activity directly on charts
 - **Technical Overlay Options**: Customizable indicator display options
 
-## Technical Implementation
-
 ### Data Pipeline
 - **Polygon.io API Integration**: Real-time and historical price data with intelligent caching and rate-limiting
 - **Fintel.io Data Retrieval**: Authentication system for accessing premium institutional ownership data
@@ -61,11 +59,6 @@ MarketSense is a sophisticated market intelligence platform designed to provide 
 - **Swing Traders**: Find optimal entry and exit points with warning level anticipation
 - **Fundamental Investors**: Correlate institutional activity with company fundamentals
 - **Algorithmic Traders**: Export signals for integration with automated trading systems
-
-
-4. Enter your Polygon.io API key in the sidebar settings
-
-5. (Optional) For institutional data, add your Fintel.io cookies in the Authentication section
 
 ## Future Development
 
