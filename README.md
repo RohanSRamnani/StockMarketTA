@@ -62,30 +62,6 @@ MarketSense is a sophisticated market intelligence platform designed to provide 
 - **Fundamental Investors**: Correlate institutional activity with company fundamentals
 - **Algorithmic Traders**: Export signals for integration with automated trading systems
 
-## Getting Started
-
-### Prerequisites
-- Python 3.9+ 
-- Polygon.io API key for price data
-- Optional: Fintel.io account for institutional data access (enhances whale detection)
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/market-sense.git
-cd market-sense
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Run the application:
-```bash
-streamlit run main.py
-```
 
 4. Enter your Polygon.io API key in the sidebar settings
 
@@ -99,15 +75,12 @@ streamlit run main.py
 - Expanded fundamental data integration
 - Custom scanner rule creation
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
 ## Acknowledgments
 
 - Data provided by [Polygon.io](https://polygon.io) and [Fintel.io](https://fintel.io)
 - Built with [Streamlit](https://streamlit.io/)
 
 ---
+Please click the link below for a veiw of this project:
 
-*MarketSense brings institutional-grade market intelligence to individual traders and investors, helping level the playing field against large financial institutions by exposing their activity patterns and providing advanced technical analysis tools across multiple timeframes.*
+[TA-Dashboard.pdf](https://github.com/user-attachments/files/20525290/TA-Dashboard.pdf)
