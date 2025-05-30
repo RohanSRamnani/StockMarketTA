@@ -76,5 +76,4 @@ This is a sophisticated market intelligence platform designed to provide traders
 ---
 Please click the link below for a veiw of this project:
 
-[TADashboard.pdf](https://github.com/user-attachments/files/20525465/TADashboard.pdf)
-
+[TADashboard.pdf](https://github.com/user-attachments/files/20525495/TADashboard.pdf)
